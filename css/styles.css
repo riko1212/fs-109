@@ -29,6 +29,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -70,16 +74,44 @@ button {
   padding-bottom: 32px;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+
 .header-logo {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
   color: #111;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  /* margin-right: 90px; */
+  /* justify-content: space-between; */
 }
 
 .header-logo-italic {
   font-style: italic;
+}
+
+.header-menu-list {
+  display: flex;
+  gap: 24px;
+  /* margin-left: auto; */
+}
+
+.header-social-list {
+  display: flex;
+  gap: 14px;
 }
 
 .header-menu-link {
@@ -117,6 +149,10 @@ button {
   border-radius: 30px;
   padding: 380px 40px 40px;
 }
+.hero-buttons {
+  display: flex;
+  align-items: center;
+}
 
 .hero-title {
   font-weight: 500;
@@ -125,18 +161,28 @@ button {
   letter-spacing: -0.03em;
   color: #fff;
   margin-bottom: 32px;
+  max-width: 484px;
 }
 
 .hero-btn {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  background-color: #fd9222;
+  border-radius: 100px;
+  border: none;
+  padding: 14px 40px;
+  margin-right: 14px;
 }
 
 .hero-made-link {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  padding: 14px 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  border-radius: 100px;
 }
 
 .hero-scroll-link {
@@ -145,6 +191,7 @@ button {
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-left: auto;
 }
 
 /*------------ --------------------- */
@@ -158,15 +205,20 @@ button {
 }
 
 .benefits-list {
+  display: flex;
+  padding: 0 18px;
+  gap: 88px;
 }
 
 .benefits-item {
+  flex-basis: calc((100% - 2 * 88px) / 3);
 }
 
 .benefits-subtitle {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+  margin-bottom: 18px;
 }
 
 .benefits-item-text {
@@ -245,17 +297,34 @@ button {
 /*------------ PRODUCTS---------------- */
 
 .products {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .products-title {
+  margin-bottom: 50px;
 }
 
 .products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 18px;
+  /* column-gap: 18px;
+  row-gap: 24px; */
 }
 
 .products-item {
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  background-color: #ffffff;
+  width: calc((100% - 54px) / 4);
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .products-image {
+  margin: 0 auto;
+  margin-bottom: 8px;
 }
 .products-subtitle {
   font-weight: 600;
@@ -264,17 +333,23 @@ button {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #111;
+  margin-bottom: 2px;
 }
 .products-item-description {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.02em;
   color: rgba(17, 17, 17, 0.7);
+  margin-bottom: 18px;
 }
 .products-btn {
   font-weight: 600;
   font-size: 14px;
   color: #111;
+  padding: 8px 20px;
+  border: 1px solid #c8c4c4;
+  border-radius: 100px;
+  background-color: #fafafa;
 }
 
 /*------------ --------------------- */

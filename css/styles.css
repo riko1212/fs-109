@@ -136,6 +136,11 @@ img {
   color: #fd9222;
 } */
 
+.header-social-icon {
+  fill: transparent;
+  stroke: #111111;
+}
+
 /*------------ --------------------- */
 
 /*------------ HERO---------------- */
@@ -146,6 +151,14 @@ img {
 
 .hero-container {
   background-color: rgba(17, 17, 17, 0.6);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 30px;
   padding: 380px 40px 40px;
 }
@@ -303,6 +316,19 @@ img {
 
 .products-title {
   margin-bottom: 50px;
+}
+
+.products-title::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/loved-img-2.jpeg);
+  background-size: cover;
+  display: inline-block;
+}
+
+.products-title::after {
+  content: '!';
 }
 
 .products-list {

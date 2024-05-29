@@ -120,12 +120,30 @@ img {
   line-height: 1.14;
   letter-spacing: -0.02em;
   color: #111;
+  /* transition-property: color;
+  transition-duration: 300ms;
+  transition-delay: 1000ms;
+  transition-timing-function:ease ; */
+  transition: color 300ms linear, background-color 300ms linear;
+  position: relative;
 }
 
 .header-menu-link:hover,
 .header-menu-link:active,
 .header-menu-link:focus {
   color: #fd9222;
+  background-color: #1e1823;
+}
+
+.header-menu-link.current:after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: #fd9222;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -36px;
 }
 
 /* .header-menu-link:active {
@@ -383,13 +401,23 @@ img {
 /*------------ SELLERS---------------- */
 
 .sellers {
+  padding-bottom: 120px;
 }
 .sellers-title {
+  margin-bottom: 50px;
 }
 
 .sellers-list {
+  display: flex;
+  gap: 16px;
 }
 .sellers-item {
+  width: calc((100% - 32px) / 3);
+  position: relative;
+}
+
+.sellers-item:hover .sellers-cover-text {
+  transform: translateY(0);
 }
 .sellers-image {
 }
@@ -400,6 +428,38 @@ img {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #111;
+  padding: 28px 0;
+  text-align: center;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+}
+
+.sellers-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.sellers-cover-text {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    161deg,
+    rgba(253, 253, 255, 0.1) 0%,
+    rgba(8, 2, 21, 0.1) 100%
+  );
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
 }
 
 /*------------ --------------------- */

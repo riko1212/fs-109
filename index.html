@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
           <a href="" class="header-logo"
@@ -76,42 +76,64 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open-btn">O</button>
       </div>
-    </header> -->
-
-    <!-- <ul class="list">
-      <li class="item">
-        <a href="" class="link">
-          <svg class="icon">
-            <use href=""></use>
-          </svg>
-        </a>
-      </li>
-      <li class="item">
-        <a href="" class="link">
-          <svg class="icon">
-            <use href=""></use>
-          </svg>
-        </a>
-      </li>
-      <li class="item">
-        <a href="" class="link">
-          <svg class="icon">
-            <use href=""></use>
-          </svg>
-        </a>
-      </li>
-      <li class="item">
-        <a href="" class="link">
-          <svg class="icon">
-            <use href=""></use>
-          </svg>
-        </a>
-      </li>
-    </ul> -->
+      <div class="mob-menu is-open">
+       <div>
+          <button type="button" class="menu-close-btn">X</button>
+          <nav class="mob-nav">
+            <ul class="mob-menu-list">
+              <li class="mob-menu-item">
+                <a class="mob-menu-link current" href="">Home</a>
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link" href="">How it’s made?</a>
+              </li>
+              <li class="mob-menu-item">
+                <a class="mob-menu-link" href="">Chocolate is loved</a>
+              </li>
+            </ul>
+          </nav>
+       </div>
+        <ul class="mob-social-list">
+          <li class="mob-social-item">
+            <a
+              class="mob-social-link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="mob-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use></svg
+            ></a>
+          </li>
+          <li class="mob-social-item">
+            <a
+              class="mob-social-link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="mob-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use></svg
+            ></a></a
+            >
+          </li>
+          <li class="mob-social-item">
+            <a
+              class="mob-social-link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="mob-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use></svg
+            ></a></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
     <!-- header.header>(nav>(a>img)+ul>li*3>a)+ul>li*3>a -->
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <div class="hero-container">
             <h1 class="hero-title">
@@ -125,7 +147,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <section class="benefits">
         <div class="container">
@@ -254,13 +276,34 @@
             hOW IT’S <span class="title-colored">made?</span>
           </h2>
           <div class="made-wrap">
-            <img
-              src="./images/made-img.jpeg"
-              alt="liquid chocolate"
-              width="600"
-              height="400"
-              class="made-image"
-            />
+            <picture>
+              <source
+                srcset="./images/made-img.jpeg 1x, ./images/made-img-2x.jpeg 2x"
+                media="(min-width: 1200px)"
+              />
+              <source
+                srcset="
+                  ./images/made-img-tab.jpeg    1x,
+                  ./images/made-img-tab-2x.jpeg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/made-img-mob.jpeg    1x,
+                  ./images/made-img-mob-2x.jpeg 2x
+                "
+                media="(min-width: 320px)"
+              />
+              <img
+                src="./images/made-img.jpeg"
+                alt="liquid chocolate"
+                width="600"
+                height="400"
+                class="made-image"
+              />
+            </picture>
+
             <div class="made-content">
               <h3 class="made-subtitle">
                 Try our chocolates today and discover the perfect balance of
@@ -310,6 +353,10 @@
           <ul class="products-list">
             <li class="products-item">
               <img
+                srcset="
+                  ./images/products-img-1.jpeg    1x,
+                  ./images/products-img-1-2x.jpeg 2x
+                "
                 src="./images/products-img-1.jpeg"
                 width="230"
                 height="201"
